@@ -10,7 +10,7 @@ def my_collect(language)
   i = 0
   collection = ['ruby', 'javascript', 'python', 'objective-c']
   while i < array.length
-    my_collect(language) << yield(|lang|lang.upcase)
+    my_collect(language) << yield{|lang|lang.upcase}
     i += 1
   end
   collection
