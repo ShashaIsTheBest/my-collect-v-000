@@ -1,17 +1,10 @@
-def my_collect(students)
-  students = ["Tim Jones", "Tom Smith", "Jim Campagno"]
-  my_collect(students) do |name|
-    name.split(" ").first
-  end
-  array
-end
 
-def my_collect(language)
+def my_collect(array)
   i = 0
-  collection = ['ruby', 'javascript', 'python', 'objective-c']
+  collect = [ ]
   while i < array.length
-    my_collect(language) << yield{|lang|lang.upcase}
+    collect << yield(array[i])
     i += 1
   end
-  collection
+  collect
 end
